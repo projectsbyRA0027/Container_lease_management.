@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registeration form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/register.js' %}"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'image/logo1.jpg' %}" alt="logo">
+        <a class="cta" href="index.html"><button>Home Page</button></a>
+    </header>
+    <div class="reg">
+        <img class="bg" src="{% static 'image/register-container.jpg' %}">
+    <div class="reg-container">
+        <h1>Registration form</h1>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="control">
+                <label for="lname">Firstname</label>
+                <input type="text" name="fname" size="15" id="fname">
+            </div>
+
+            <div class="control">
+                <label for="lname">Lastname</label>
+                <input type="text" name="lname"   size="15" id="lname">
+            </div>
+
+            <div class="control">
+                <label for="email">Emailid</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="control">
+                <label for="phone">PhoneNo</label>
+                <input type="text" name="phone"  size="10" id="phone">
+            </div>
+
+            <div class="control">
+                <label for="psw">Password</label>
+                <input type="password" name="psw" id="psw">
+            </div>
+
+            <div class="control">
+                <label for="psw"> ConfirmPassword</label>
+                <input type="password" name="cpsw" id="cpsw">
+            </div>
+
+            
+
+            <div class="control">
+                <label for="cname">Companyname</label>
+                <input type="text" name="companyname" id="cname">
+            </div>
+
+            <div class="control">
+                <label>Country</label>
+                <input type="text" name="country" id="coun">
+            </div>
+
+            <div class="control">
+                <label for="code">pincode</label>
+                <input type="text" name="code"   size="10" id="code">
+            </div>
+           <div class="control">
+                <label>Domain:</label>
+                <select name="domain" id="domain">
+                  <option value="Lessor">Lessor</option>
+                  <option value="lesse">Lessee</option>
+                </select>
+            </div>
+            <div class="control">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">Lessor</a></li>
+                            <li><a href="#">Leasing</a></li>
+                        </ul>
+                        <br>
+                    <h4>&copy; 2022 Shiash Project</h4>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">Payment option</a></li>
+                            <li><a href="#">shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">Dargo containers</a></li>
+                            <li><a href="#">Femos containers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+    </div>
+</body>
+</html>

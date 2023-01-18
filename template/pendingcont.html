@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Container-uplaod-Pending List</title>
+</head>
+<body>
+    <h1>Container-upload-Pendinglist</h1>
+ <center>
+     <table>
+         <tr>
+             <th>Container type</th>
+             <th>Container Price</th>
+             <th>Container Count</th>
+             <th>Lessor Name</th>
+             <th>Status</th>
+             <th>Action</th>
+         </tr>
+         {% for i in value %}
+        <tr>
+            <td>{{i.Container Type}}</td>
+            <td>{{i.Container Price}}</td>
+            <td>{{i.Container Count}}</td>
+            <td>{{i.Lessor Name}}</td>
+            <td>{{i.Status}}</td>
+            <td>
+                <a href="/approve/{i.id}">Approve</a>
+            </td>
+        </tr>
+     </table>
+     {% endfor %}
+ </center>
+</body>
+</html>

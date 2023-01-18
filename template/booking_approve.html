@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve Container</title>
+    {% load_static %}
+    <link href="{% 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <style>
+ table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+  }
+
+  tr:nth-child(even) {
+    background-color:  #4CAF50;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'image/logo1.jpg' %}" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li></li>
+            </ul>
+        </nav>
+        <a class="cta" href="lessor-page.html"><button>Back</button></a>
+    </header>
+    <table>
+        <tr>
+          <th>Checkbox</th>
+          <th>Type</th>
+          <th>Count</th>
+          <th>Price</th>
+          <th>Leased Date</th>
+          <th>Return Date</th>
+          <th>Lessee Name</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>{{i.Type}}</td>
+          <td>{{i.Count}}</td>
+          <td>{{i.Price}}</td>
+          <td>{{i.Leased Date}}</td>
+          <td>{{i.Return Date}}</td>
+          <td>{{i.Lessee Name}}</td>
+          <td>{{i.Status}}</td>
+        </tr>
+      </table>
+      
+      <button style="margin-top: 20px;">Approve</button>
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">Lessor</a></li>
+                        <li><a href="#">Leasing</a></li>
+                    </ul>
+                    <br>
+                <h4>&copy; 2022 Shiash Project</h4>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">Payment option</a></li>
+                        <li><a href="#">shipping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Dargo containers</a></li>
+                        <li><a href="#">Femos containers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      </body>
+      </html>

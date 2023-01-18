@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessee leasing</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+</head>
+<body>
+    
+    <div class="leasing">
+        <h1>Lease-Entry-Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="coloumn">
+              <label>Type</label>
+                <input type="text" name="type" id="type">
+            </div>
+            <div class="coloumn">
+                <label>Count</label>
+                <input type="text" name="count" id="count">
+            </div>
+            <div class="coloumn">
+                <label>Price</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <div class="coloumn">
+                <label>Leased Date</label>
+                <input type="date" name="ldate" id="ldate">
+            </div>
+            <div class="coloumn">
+                <label>Return Date</label>
+                <input type="date" name="rdate" id="rdate">
+            </div>
+            <div class="coloumn">
+                <label>Lessee Name</label>
+                <input type="text" name="lname" id="laname">
+            </div>
+            <div class="coloumnbtn">
+                <input type="submit" value="submit" >
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>

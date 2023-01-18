@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Container</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="{% static 'image/logo1.jpg' %}" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li></li>
+            </ul>
+        </nav>
+        <a class="cta" href="lessor-page.html"><button>Back</button></a>
+    </header>
+        <h1>Container-Approvedlist</h1>
+ <center>
+     <table>
+         <tr>
+             <th>Container type</th>
+             <th>Container Price</th>
+             <th>Container Count</th>
+             <th>Lessor Name</th>
+             <th>Status</th>
+             <th>Action</th>
+         </tr>
+         {% for i in value %}
+        <tr>
+            <td>{{i.Container Type}}</td>
+            <td>{{i.Container Price}}</td>
+            <td>{{i.Container Count}}</td>
+            <td>{{i.Lessor Name}}</td>
+            <td>{{i.Status}}</td>
+            <td>
+                <a href="/edit/{i.id}">Edit</a>
+                <a href="/delete/{i.id}">Delete</a>
+            </td>
+        </tr>
+     </table>
+     {% endfor %}
+ </center>
+    <br>
+    <br>
+    {% if a %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    <label>Container-id</label>
+                </td>
+                <td>
+                    {{a.Container-id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Container Type</label>
+                </td>
+                <td>
+                    {{a.Container Type}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Container Price</label>
+                </td>
+                <td>
+                    {{a.Container Price}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Container Count</label>
+                </td>
+                <td>
+                    {{a.Container Count}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Lessor Name</label>
+                </td>
+                <td>
+                    {{a.Lessor Name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Status</label>
+                </td>
+                <td>
+                    {{a.Status}}
+                </td>
+            </tr>
+        </table>
+
+    </form>
+     {% endif %}
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">Lessor</a></li>
+                            <li><a href="#">Leasing</a></li>
+                        </ul>
+                        <br>
+                    <h4>&copy; 2022 Shiash Project</h4>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">Payment option</a></li>
+                            <li><a href="#">shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">Dargo containers</a></li>
+                            <li><a href="#">Femos containers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
